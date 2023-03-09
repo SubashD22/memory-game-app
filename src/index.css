@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.blocks{
+  width: 500px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+.block {
+  height: 110px;
+  width: 1fr;
+  background-color: gray;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: background-color 0.2s linear
+}
+@media only screen and (max-width: 480px) {
+  .blocks{
+    max-width: 300px;
+    gap:3px
+  }
+  .block{
+   height: 90px;
+  }
+}
+
