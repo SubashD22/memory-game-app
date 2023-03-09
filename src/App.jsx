@@ -130,6 +130,7 @@ const App = () => {
   useLayoutEffect(() => { shuffle() }, []);
   return (
     < main>
+      <h1>Memory game</h1>
       <Button onClick={shuffle}>New Game</Button>
       <h2> No of Turns : {turns}</h2>
       <h2>Matched: {matched}/8</h2>
@@ -143,6 +144,15 @@ const App = () => {
           disabled={disabled}
         />)}
       </div>
+      <h3>
+        How to Play
+      </h3>
+      <ul style={{ padding: '20px' }}>
+        <li>chooses a card,selects another card</li>
+        <li>If the two cards are a matching pair,then they take the two cards and start a stack.</li>
+        <li>If the cards are not a match they are turned back over</li>
+        <li>The game continues in this fashion until all the cards are played.</li>
+      </ul>
     </main >
   )
 }
